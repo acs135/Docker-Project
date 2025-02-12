@@ -1,0 +1,35 @@
+services:
+  mc:
+    image: itzg/minecraft-server:latest
+    container_name: mcserver
+    tty: true
+    stdin_open: true
+    ports:
+      - "25565:25565"
+    environment:
+      EULA: "TRUE"
+      TYPE: "PAPER"
+      MOTD: "hi jeastman"
+      TZ: "America/New_York"
+      DIFFICULTY: "3"
+      SIMULATION_DISTANCE: "6"
+      VIEW_DISTANCE: "6"
+      SPAWN_PROTECTION: "0"
+      OPS: |-
+        7862
+    volumes:
+      - "./data:/data"
+    networks:
+      - mc-network
+
+  rathole:
+    image: rapiz1/rathole:latest
+    volumes:
+      - "./config.toml:/app/config.toml:ro"
+    command: ["--client", "/app/config.toml"]
+    networks:
+      - mc-network
+
+networks:
+  mc-network:
+    driver: bridge

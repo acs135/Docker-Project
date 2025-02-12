@@ -1,0 +1,6 @@
+[client]
+remote_addr = "23.239.17.142:1028"
+
+[client.services.minecraft]
+token = "benisgay"
+local_addr = "mcserver:25565"
