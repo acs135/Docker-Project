@@ -1,0 +1,6 @@
+[server]
+bind_addr = "23.239.17.142:1028"
+
+[server.services.minecraft]
+token = "benisgay"
+bind_addr = "23.239.17.142:1026"
