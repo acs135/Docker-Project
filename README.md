@@ -1,6 +1,6 @@
 # About
 
-This project runs a paper minecraft server and a "rathole" in two docker containers allowing the server to be accessed from outside the network without needing port forwarding. This requires that you have a VPS server with a public facing IP address that acts as a reverse proxy.
+This project runs a paper minecraft server and a "rathole" in two docker containers allowing the server to be accessed from outside the network without needing port forwarding. This requires that you have a VPS server with a public facing IP address that will act as a reverse proxy.
 
 # Quick Start
 
